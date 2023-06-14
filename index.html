@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Калькулятор витрат</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+  <h1>Калькулятор витрат</h1>
+  <div class="input-container">
+    <label for="expenseInput">Витрата:</label>
+    <input type="text" id="expenseInput" placeholder="Введіть витрату">
+  </div>
+  <div class="input-container">
+    <label for="categorySelect">Категорія:</label>
+    <select id="categorySelect" onchange="toggleCustomCategoryInput()">
+      <option value="custom">Своя категорія</option>
+      <option value="food">Їжа</option>
+      <option value="transport">Транспорт</option>
+      <option value="housing">Житло</option>
+      <option value="entertainment">Розваги</option>
+    </select>
+  </div>
+  <div class="input-container" id="customCategoryInputContainer">
+    <label for="customCategoryInput">Своя категорія:</label>
+    <input type="text" id="customCategoryInput" placeholder="Введіть свою категорію">
+  </div>
+  <div class="input-container">
+    <label for="dateInput">Дата:</label>
+    <input type="date" id="dateInput">
+  </div>
+  <button onclick="addExpense()">Додати</button>
+  <ul id="expenseList"></ul>
+  
+  <h2>Загальна сума витрат: <span id="totalExpense">0</span> грн.</h2>
+
+  <script src="script.js"></script>
+</body>
+</html>
